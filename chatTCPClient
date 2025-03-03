@@ -1,0 +1,19 @@
+import socket
+import threading
+
+SERVER_IP = ''
+SERVER_PORT = 9999
+
+stop_flag = threading.Event()
+
+def receive():
+  while not stop_flag.is_set():
+
+
+
+if __name__ == '__main__':
+
+  nickname = input('Choose your nickname: ')
+
+  with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:
+    client.connect((SERVER_IP
