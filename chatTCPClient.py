@@ -3,7 +3,7 @@
 import socket
 import threading
 
-SERVER_IP = '10.4.2.30'    #Raspberry Pi IP Address
+SERVER_IP = '10.42.0.1'    #Raspberry Pi IP Address
 SERVER_PORT = 12345         #PORT
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
