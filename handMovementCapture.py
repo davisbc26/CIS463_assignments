@@ -27,6 +27,7 @@ def draw_landmarks_on_image(rgb_image, detection_result):
     hand_landmarks_list = detection_result.hand_landmarks
     handedness_list = detection_result.handedness
     annotated_image = np.copy(rgb_image)
+    print(handedness_list)
 
     # Loop through the detected hands to visualize.
     for idx in range(len(hand_landmarks_list)):
