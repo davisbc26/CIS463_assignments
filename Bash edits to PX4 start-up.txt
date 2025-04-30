@@ -1,0 +1,12 @@
+Bash Edits to PX4 Start-up
+
+# Set default GPS coordinates to Virginia Military Institute
+param set SIM_GPS_LAT 37.7900
+param set SIM_GPS_LON -79.4350
+param set SIM_GPS_ALT 540.0
+
+# For QGroundControl
+mavlink start -u 14560 -o 14550 -t 10.4.18.155 -m onboard
+
+# For MAVSDK (keyboard control)
+mavlink start -u 14600 -o 14540 -t 10.4.18.155 -m onboard

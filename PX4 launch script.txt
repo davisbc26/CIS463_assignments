@@ -1,0 +1,31 @@
+#!/bin/bash
+
+export PX4_HOME_LAT=37.7900
+export PX4_HOME_LON=-79.4375
+export PX4_HOME_ALT=500
+
+# STEP 1 - OPEN PX4 #
+
+cd ~/DroneSITL/PX4-Autopilot
+make px4_sitl gz_x500
+
+
+# CODE TO ENTER PX4 STARTUP SCRIPT #
+
+nano ~/DroneSITL/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/rcS
+
+
+# STEP 2 - START MAVSK SERVER ON WINDOWS TERMINAL #
+
+cd "C:\Users\davis\OneDrive - Virginia Military Institute\Documents\S6\Robotics\CIS463_assignments"
+
+.\mavsdk_server.exe -p 50051 --url udpin://0.0.0.0:14540
+
+# STEP 3 - NAVIGATING TO SCRIPT IN WINDOWS TERMINAL #
+
+cd "C:\Users\davis\OneDrive - Virginia Military Institute\Documents\S6\Robotics\CIS463_assignments"
+.venv\Scripts\activate
+python keyboard_flight.py
+
+
+
